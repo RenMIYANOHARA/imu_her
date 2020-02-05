@@ -5,6 +5,7 @@ import numpy as np
 from scipy.interpolate import interp1d
 from sklearn import preprocessing
 
+os.chdir('../')
 cwd = os.getcwd() # Get the current working directory
 
 subject_names=['Mutsuki','Sohki','Tetsuya']    #被験者名
