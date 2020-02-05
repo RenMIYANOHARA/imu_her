@@ -1,5 +1,4 @@
 import os
-import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import random
@@ -7,7 +6,7 @@ from sklearn import decomposition
 from sklearn.neighbors import KNeighborsClassifier
 
 
-
+os.chdir('../')
 cwd=os.getcwd()   #Get the current working directory
 path_save=cwd+'\\Database\\'
 

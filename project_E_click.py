@@ -65,7 +65,8 @@ class Plotter:
             self.ax1.axvline(x=point[0], color='r', linewidth=3)
             self.ax1.axvline(x=point[1], color='b', linewidth=3)
 
-cwd=os.getcwd()  #現在のディレクトリをcwdに入れる
+os.chdir('../')
+cwd=os.getcwd()#現在のディレクトリをcwdに入れる
 
 subject_names=['Mutsuki','Sohki','Tetsuya']    #被験者名
 exercices_names=['baseball','basketball','bow','jump','kendo','panch','push up','soccer','squat','swing']   #エクササイズ名
@@ -86,13 +87,12 @@ print(title)   #現在選択中の被験者名とエクササイズ名を表示
 #2) Click the points
 #3) When you have click all the points you can use point = plotter.get poinits()
 
-plotter=Plotter(data, title=title)
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! #
 # This part of the code must be use only after you have finish to click !!! #
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! #
 
-points=plotter.get_points()
+points=Plotter.get_points()
 
 points=np.array(points)
 points=points.reshape(points.shape[0] // 2, -1)
