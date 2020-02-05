@@ -9,7 +9,7 @@ cwd=os.getcwd()
 
 print(cwd)
 
-
+#I love you 300
 
 #jikken push
 
